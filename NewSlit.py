@@ -12,14 +12,12 @@ def getData(vid):
     return (a)
 
 sourceVid = 'vid.mp4'
-sourceVid = 'VID_20191113_171811.mp4'
 
 vidData = json.loads(getData(sourceVid))
 
 if vidData['streams'][0]['codec_type'] == 'video':
     audio = 1
     video = 0
-
 
 width = vidData['streams'][video]['width']
 print ('Video Width:\t',width, 'px')
@@ -41,7 +39,7 @@ print ('Audio Duration:\t',audDuration, 's')
 
 def vidSlice(sourceVid, start, end, step, width, frames):
     startTime = 0.0 # seconds
-    duration = 9.5  # seconds
+    duration = 9.5  # seconds 
     if frames % 2 != 0:
         frames += 1 # round up frames to an even number
     end *= 2
@@ -71,4 +69,3 @@ start = 0
 end = int(int(height)/ 2)+ int(start/2) # frames
 step = 2
 vidSlice(sourceVid, start, end, step, width, frames) # width
-
