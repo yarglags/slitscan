@@ -76,8 +76,8 @@ def makeVidWithAudio(outFile, inFiles, frameRate, width, height):
     return (a)
 
 
-sourceVid = 'vid.mp4'
-sourceVid = 'VID_20191113_171811.mp4'   #   <<<<<<<<<<<<<<<<<<<<<<<<<
+sourceVid = 'vid.mp4'   #   <<<<<<<<<<<<<<<<<<<<<<<<< Your file goes here
+# sourceVid = 'VID_20191113_171811.mp4'   
 vidData = json.loads(getData(sourceVid))
 astream = 1
 vstream = 0
